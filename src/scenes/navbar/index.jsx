@@ -14,7 +14,6 @@ import {
 import {
   Search,
   Message,
-  DarkMoke,
   LightMode,
   Notifications,
   Help,
@@ -23,7 +22,7 @@ import {
   DarkMode,
 } from "@mui/icons-material";
 
-import { UseDispatch, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { setMode, setLogout } from "../../state";
 import FlexBetween from "../../components/FlexBetween";
 import { useNavigate } from "react-router-dom";
