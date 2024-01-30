@@ -123,7 +123,7 @@ const Navbar = () => {
           zIndex={"10"}
           maxWidth={"500px"}
           minWidth={"300px"}
-          background={background}
+          backgroundColor={background}
         >
           {/* CLOSE ICON */}
           <Box display="flex" justifyContent="flex-end" p="1rem">
