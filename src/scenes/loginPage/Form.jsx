@@ -40,3 +40,7 @@ const initialValuesRegister = {
   occupation: "",
   picture: "",
 };
+const initialValuesLogin = {
+  email: "",
+  password: "",
+};
