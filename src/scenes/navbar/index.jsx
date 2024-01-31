@@ -52,7 +52,7 @@ const Navbar = () => {
           onClick={() => navigate("/home")}
           sx={{ "&:hover": { color: primaryLight, cursor: "pointer" } }}
         >
-          Sociopedia
+          SWACO
         </Typography>
         {isNonMobileScreens && (
           <FlexBetween
