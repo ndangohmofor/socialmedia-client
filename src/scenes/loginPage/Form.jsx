@@ -112,6 +112,19 @@ const Form = () => {
                     gridColumn: "span 2",
                   }}
                 />
+
+                <TextField
+                  label={"Location"}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.location}
+                  name="location"
+                  error={Boolean(touched.location) && Boolean(errors.location)}
+                  helperText={touched.location && errors.location}
+                  sx={{
+                    gridColumn: "span 2",
+                  }}
+                />
               </>
             )}
           </Box>
