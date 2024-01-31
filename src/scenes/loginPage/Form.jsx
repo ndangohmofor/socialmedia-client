@@ -86,7 +86,7 @@ const Form = () => {
             {isRegister && (
               <>
                 <TextField
-                  label={"first Name"}
+                  label={"First Name"}
                   onBlur={handleBlur}
                   onChange={handleChange}
                   value={values.firstName}
@@ -95,6 +95,19 @@ const Form = () => {
                     Boolean(touched.firstName) && Boolean(errors.firstName)
                   }
                   helperText={touched.firstName && errors.firstName}
+                  sx={{
+                    gridColumn: "span 2",
+                  }}
+                />
+
+                <TextField
+                  label={"Last Name"}
+                  onBlur={handleBlur}
+                  onChange={handleChange}
+                  value={values.lastName}
+                  name="lastName"
+                  error={Boolean(touched.lastName) && Boolean(errors.lastName)}
+                  helperText={touched.lastName && errors.lastName}
                   sx={{
                     gridColumn: "span 2",
                   }}
