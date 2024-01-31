@@ -11,7 +11,7 @@ import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
 import * as yup from "yup";
 import { useNavigate } from "react-router-dom";
-import { UseDispatch } from "react-redux";
+import { UseDispatch, useDispatch } from "react-redux";
 import { setLogin } from "../../state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "../../components/FlexBetween";
@@ -43,4 +43,14 @@ const initialValuesRegister = {
 const initialValuesLogin = {
   email: "",
   password: "",
+};
+
+const Form = () => {
+  const [pageType, setPageType] = useState("login");
+  const { paletter } = useTheme();
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const isNonMobile = useMediaQuery("(min-width: 600px)");
+  const isLogin = pageType === "login";
+  const isRegister = pageType === "register";
 };
