@@ -122,7 +122,7 @@ const Form = () => {
                   error={Boolean(touched.location) && Boolean(errors.location)}
                   helperText={touched.location && errors.location}
                   sx={{
-                    gridColumn: "span 2",
+                    gridColumn: "span 4",
                   }}
                 />
 
@@ -137,7 +137,7 @@ const Form = () => {
                   }
                   helperText={touched.occupation && errors.occupation}
                   sx={{
-                    gridColumn: "span 2",
+                    gridColumn: "span 4",
                   }}
                 />
               </>
