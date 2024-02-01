@@ -15,6 +15,7 @@ import { UseDispatch, useDispatch } from "react-redux";
 import { setLogin } from "../../state";
 import Dropzone from "react-dropzone";
 import FlexBetween from "../../components/FlexBetween";
+import { Palette } from "@mui/icons-material";
 
 const registerSchema = yup.object().shape({
   firstName: yup.string().required("required"),
@@ -47,7 +48,7 @@ const initialValuesLogin = {
 
 const Form = () => {
   const [pageType, setPageType] = useState("login");
-  const { paletter } = useTheme();
+  const { palette } = useTheme();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const isNonMobile = useMediaQuery("(min-width: 600px)");
@@ -140,6 +141,13 @@ const Form = () => {
                     gridColumn: "span 4",
                   }}
                 />
+
+                <Box
+                  gridColumn={"span 4"}
+                  border={`1px solid ${palette.neutral.medium}`}
+                  borderRadius={"5px"}
+                  p={"1rem"}
+                />
               </>
             )}
           </Box>
@@ -148,3 +156,5 @@ const Form = () => {
     </Formik>
   );
 };
+
+export default Form;
