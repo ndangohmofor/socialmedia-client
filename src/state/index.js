@@ -20,7 +20,7 @@ export const authSlice = createSlice({
     },
     setLogout: (state) => {
       state.user = null;
-      state.toekn = null;
+      state.token = null;
     },
     setFriends: (state, action) => {
       if (state.user) {
