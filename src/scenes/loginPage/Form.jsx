@@ -55,8 +55,31 @@ const Form = () => {
   const isLogin = pageType === "login";
   const isRegister = pageType === "register";
 
+  const register = async (values, onSubmitProps) => {
+    /* This allows us to send form info with image */
+    const formData = new FormData();
+    for (let value in values) {
+      formData.append(value, values[value]);
+    }
+    formData.append("picturePath", values.picture.name);
+
+    const savedUserResponse = await fetch(
+      "http://localhost:3001/auth/register",
+      {
+        method: "POST",
+        body: formData,
+      }
+    );
+    const saveUser = await savedUserResponse.json();
+    onSubmitProps.resetForm();
+
+    if (saveUser) {
+      setPageType("login");
+    }
+  };
+
   const handleFormSubmit = async (values, onSubmitProps) => {
-    if (isLogin) await loginSchema(values, onSubmitProps);
+    if (isLogin) await login(values, onSubmitProps);
     if (isRegister) await register(values, onSubmitProps);
   };
 
