@@ -106,7 +106,7 @@ const Form = () => {
 
   return (
     <Formik
-      OnSubmit={handleFormSubmit}
+      onSubmit={handleFormSubmit}
       initialValues={isLogin ? initialValuesLogin : initialValuesRegister}
       validationSchema={isLogin ? loginSchema : registerSchema}
     >
