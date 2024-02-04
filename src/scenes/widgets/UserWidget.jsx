@@ -99,6 +99,16 @@ const UserWidget = ({ userId, picturePath }) => {
             <Typography color={medium}>{occupation}</Typography>
           </Box>
         </Box>
+
+        {/* THIRD ROW */}
+        <Box p={"1rem"}>
+          <FlexBetween mb={"0.5rem"}>
+            <Typography color={medium}>Who's viewed your profile</Typography>
+            <Typography color={main} fontWeight={"500"}>
+              {viewedProfile}
+            </Typography>
+          </FlexBetween>
+        </Box>
       </FlexBetween>
     </WidgetWrapper>
   );
