@@ -2,6 +2,7 @@ import React from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import { useTheme, useMediaQuery } from "@mui/material";
+import Form from "./Form";
 
 const LoginPage = () => {
   const theme = useTheme();
@@ -29,6 +30,7 @@ const LoginPage = () => {
         <Typography fontWeight={"500"} variant="h5" sx={{ mb: "1.5rem" }}>
           Welcome to SWACO - Social Media for Southern Cameroonians In Ohio
         </Typography>
+        <Form></Form>
       </Box>
     </Box>
   );
