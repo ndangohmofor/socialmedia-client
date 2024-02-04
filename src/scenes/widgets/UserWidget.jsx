@@ -95,6 +95,7 @@ const UserWidget = ({ userId, picturePath }) => {
           <Typography color={medium}>{occupation}</Typography>
         </Box>
       </Box>
+      <Divider />
 
       {/* THIRD ROW */}
       <Box p={"1rem"}>
@@ -111,6 +112,7 @@ const UserWidget = ({ userId, picturePath }) => {
           </Typography>
         </FlexBetween>
       </Box>
+      <Divider />
 
       {/* FOURTH ROW */}
       <Box p={"1rem 0"}>
