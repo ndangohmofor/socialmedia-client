@@ -212,7 +212,7 @@ const Form = () => {
                         }}
                       >
                         <input {...getInputProps()} />
-                        {!values.picutre ? (
+                        {!values.picture ? (
                           <p>Add Picture Here</p>
                         ) : (
                           <FlexBetween>
