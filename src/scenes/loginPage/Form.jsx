@@ -85,7 +85,7 @@ const Form = () => {
       },
       body: JSON.stringify(values),
     });
-    const loggedIn = loginResponse.json();
+    const loggedIn = await loginResponse.json();
     onSubmitProps.resetForm();
 
     if (loggedIn) {
