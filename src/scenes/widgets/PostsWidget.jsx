@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { setPosts } from "../../state";
 import PostWidget from "./PostWidget";
 
-const PostsWidget = ({ useId, isProfile = false }) => {
+const PostsWidget = ({ userId, isProfile = false }) => {
   const dispatch = useDispatch();
   const posts = useSelector((state) => state.posts);
   const token = useSelector((state) => state.token);
@@ -17,7 +17,7 @@ const PostsWidget = ({ useId, isProfile = false }) => {
     dispatch(setPosts({ posts: data }));
   };
 
-  const getUserPosts = async (userId) => {
+  const getUserPosts = async () => {
     const response = await fetch(`http://localhost:3001/posts/${userId}`, {
       method: "GET",
       headers: { Authorization: `Bearer ${token}` },
