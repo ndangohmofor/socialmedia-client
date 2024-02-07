@@ -25,6 +25,14 @@ const PostsWidget = ({ useId, isProfile = false }) => {
     const data = await response.json();
     dispatch(setPosts({ posts: data }));
   };
+
+  useEffect(() => {
+    if (isProfile) {
+      getUserPosts();
+    } else {
+      getPosts();
+    }
+  }, []); //eslint-disable-line react-hooks/exhaustive-deps
 };
 
 export default PostsWidget;
