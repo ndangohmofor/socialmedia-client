@@ -28,7 +28,7 @@ const LoginPage = () => {
         backgroundColor={theme.palette.background.alt}
       >
         <Typography fontWeight={"500"} variant="h5" sx={{ mb: "1.5rem" }}>
-          Welcome to SWACO - Social Media for Southern Cameroonians In Ohio
+          Social Media for Southern Cameroonians In Ohio
         </Typography>
         <Form></Form>
       </Box>
